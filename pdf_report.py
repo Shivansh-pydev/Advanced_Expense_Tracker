@@ -9,6 +9,7 @@ def create_pdf(file_path, df):
     elements = []
     elements.append(Paragraph("Expense Report", styles['Title']))
     elements.append(Spacer(1,12))
+    
 
     total = df['Amount'].sum()
     elements.append(Paragraph(f"Total Expense: ₹{round(total,2)}", styles['Normal']))
